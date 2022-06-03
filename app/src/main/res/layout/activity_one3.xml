@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bw"
+    tools:context=".one3">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="3"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/question3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="340dp"
+        android:layout_height="28dp"
+        android:text="(如看到白色，因為是原背景顏色，所以不算在內)"
+        android:textColor="#050505"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/begin3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question3"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <TextView
+        android:id="@+id/question3"
+        android:layout_width="318dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginBottom="122dp"
+        android:textColor="#05392C"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/begin3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/begin3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="275dp"
+        android:backgroundTint="#A7DCCE"
+        android:onClick="begin3"
+        android:text="開始"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question3" />
+</android.support.constraint.ConstraintLayout>

@@ -21,7 +21,7 @@ public class second1 extends AppCompatActivity implements SensorEventListener {
     EditText answer;
     Sensor psr, gsr;
     View layout;
-    Button confirm,next;
+    Button confirm,next,giveup1;
     TextView txv,end;
     int count = 0;
 
@@ -41,6 +41,7 @@ public class second1 extends AppCompatActivity implements SensorEventListener {
         next=findViewById(R.id.next);
         answer=findViewById(R.id.answer);
 
+        giveup1=findViewById(R.id.giveup1);
         sm = (SensorManager) getSystemService(SENSOR_SERVICE);
         psr = sm.getDefaultSensor(Sensor.TYPE_PROXIMITY);  //接近感測器
 
@@ -144,8 +145,31 @@ public class second1 extends AppCompatActivity implements SensorEventListener {
 
     }
     public void next(View view){
-        Intent it2=new Intent(this,one2.class);
+        int score1=30;
+        Intent it2 = new Intent(this,one2.class);
+
+        it2.putExtra("分數1",score1);
+
+
+//new一個Bundle物件，並將要傳遞的資料傳入
+      //  Bundle bundle1 = new Bundle();
+       // bundle1.putInt("分數1",score1 );//傳遞Double
+//將Bundle物件傳給intent
+        //it2.putExtras(bundle1);
+
+
         startActivity(it2);
+    }
+
+    public void giveup1(View view){
+        int score1=0;
+        Intent it2 = new Intent(this,one2.class);
+
+        it2.putExtra("分數1",score1);
+
+
+        startActivity(it2);
+
     }
 
     public void confirm(View view){
@@ -156,6 +180,7 @@ public class second1 extends AppCompatActivity implements SensorEventListener {
             layout.setBackgroundResource((R.drawable.bgr));
 
         }else{
+            giveup1.setVisibility(View.VISIBLE);
             end.setText("答案錯誤\n返回上一頁再試一次");
             layout.setBackgroundResource((R.drawable.bgr));
         }

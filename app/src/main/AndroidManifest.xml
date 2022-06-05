@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Final">
         <activity
+            android:name=".finalscore"
+            android:exported="false" />
+        <activity
             android:name=".second3"
             android:exported="false" />
         <activity

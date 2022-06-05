@@ -23,10 +23,11 @@ public class second3 extends AppCompatActivity implements SensorEventListener,Vi
     EditText answer3;
     Sensor psr3, gsr3;
     View layout3;
-    Button confirm3, next3;
+    Button confirm3, next3,giveup3;
     TextView txv3, end3;
     int count3 = 0;
-    String correct3 = "粉黃紅藍綠";
+    String correct3 = "黃紅藍綠粉";
+    int sum4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class second3 extends AppCompatActivity implements SensorEventListener,Vi
         confirm3 = findViewById(R.id.confirm3);
         next3 = findViewById(R.id.next3);
         answer3 = findViewById(R.id.answer3);
+        giveup3=findViewById(R.id.giveup3);
 
         sm3 = (SensorManager) getSystemService(SENSOR_SERVICE);
         psr3 = sm3.getDefaultSensor(Sensor.TYPE_PROXIMITY);  //接近感測器
@@ -48,7 +50,9 @@ public class second3 extends AppCompatActivity implements SensorEventListener,Vi
         gsr3 = sm3.getDefaultSensor(Sensor.TYPE_GYROSCOPE);  //陀螺儀
         layout3.setOnTouchListener(this);
 
-
+        Intent it5=getIntent();
+        int end33=it5.getIntExtra("分數2",0);
+        sum4=end33;
 
         new CountDownTimer(5000, 4000) {
 
@@ -153,15 +157,34 @@ public class second3 extends AppCompatActivity implements SensorEventListener,Vi
             layout3.setBackgroundResource((R.drawable.bgr));
 
         } else {
+            giveup3.setVisibility(View.VISIBLE);
             end3.setText("答案錯誤\n返回上一頁再試一次");
             layout3.setBackgroundResource((R.drawable.bgr));
         }
     }
+    public void giveup3(View view){
+        int score3=0;
+        Intent it6=new Intent(this,finalscore.class);
+        it6.putExtra("分數3",sum4);
+        startActivity(it6);
 
-    public void next3(View view) {
-        finish();
+//new一個Bundle物件，並將要傳遞的資料傳入
+        Bundle bundle3 = new Bundle();
+        bundle3.putInt("分數3",score3);//傳遞Double
+//將Bundle物件傳給intent
+        it6.putExtras(bundle3);
+        startActivity(it6);
+
     }
 
+    public void next3(View view){
+        int score3=40;
+        int fin1=score3+sum4;
+        Intent it6=new Intent(this,finalscore.class);
+        it6.putExtra("分數3",fin1);
+        startActivity(it6);
+
+    }
 
 
     @Override

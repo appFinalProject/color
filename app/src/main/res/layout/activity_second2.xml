@@ -86,4 +86,14 @@
         app:layout_constraintVertical_bias="0.512"
         tools:visibility="invisible" />
 
+    <TextView
+        android:id="@+id/q2"
+        android:layout_width="65dp"
+        android:layout_height="11dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/txv2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

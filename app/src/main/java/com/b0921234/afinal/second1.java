@@ -7,6 +7,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+//import androidx.appcompat.app.AppCompatActivity;
 
 public class second1 extends AppCompatActivity implements SensorEventListener {
 
@@ -35,7 +38,7 @@ public class second1 extends AppCompatActivity implements SensorEventListener {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
 
         layout = findViewById(R.id.layout);
-        txv =findViewById(R.id.txv);
+       // txv =findViewById(R.id.txv);
         end=findViewById(R.id.end);
         confirm=findViewById(R.id.confirm);
         next=findViewById(R.id.next);
@@ -152,8 +155,8 @@ public class second1 extends AppCompatActivity implements SensorEventListener {
 
 
 //new一個Bundle物件，並將要傳遞的資料傳入
-      //  Bundle bundle1 = new Bundle();
-       // bundle1.putInt("分數1",score1 );//傳遞Double
+        //  Bundle bundle1 = new Bundle();
+        // bundle1.putInt("分數1",score1 );//傳遞Double
 //將Bundle物件傳給intent
         //it2.putExtras(bundle1);
 

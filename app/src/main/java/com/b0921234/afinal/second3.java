@@ -194,12 +194,12 @@ public class second3 extends AppCompatActivity implements SensorEventListener,Vi
 
         }
         else if (event.getAction() == MotionEvent.ACTION_MOVE) {
-            layout3.setBackgroundColor(Color.parseColor("#FF00FF"));
+           // layout3.setBackgroundColor(Color.parseColor("#FF00FF"));
         }
         else if (event.getAction() == MotionEvent.ACTION_UP) {
             layout3.setBackgroundColor(Color.WHITE);
         }
-            return false;
+            return true;
 
     }
 }

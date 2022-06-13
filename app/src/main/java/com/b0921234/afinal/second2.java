@@ -22,7 +22,7 @@ public class second2 extends AppCompatActivity implements SensorEventListener {
     Sensor psr2, gsr2;
     View layout2;
     Button confirm2,next2,giveup2;
-    TextView txv2,end2,tv7;
+    TextView txv2,end2,q2;
     int count2 = 0;
     String correct2="黑黃紅藍";
     int sum2;
@@ -41,6 +41,8 @@ public class second2 extends AppCompatActivity implements SensorEventListener {
         confirm2=findViewById(R.id.confirm2);
         next2=findViewById(R.id.next2);
         answer2=findViewById(R.id.answer2);
+        q2=findViewById(R.id.q2);
+        q2.setText("向左傾、手遮住螢幕、手打開遮住的螢幕、向右傾");
 
         giveup2=findViewById(R.id.giveup2);
         sm2 = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -51,9 +53,7 @@ public class second2 extends AppCompatActivity implements SensorEventListener {
         Intent it3=getIntent();
         int end22=it3.getIntExtra("分數1",0);
         sum2=end22;
-       // tv7=findViewById(R.id.textView7);
 
-        //tv7.setText("分數"+sum2);
 
         new CountDownTimer(5000, 4000) {
 

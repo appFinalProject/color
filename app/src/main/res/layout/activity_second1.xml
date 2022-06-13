@@ -10,7 +10,7 @@
     tools:context=".second1">
 
     <TextView
-        android:id="@+id/txv"
+        android:id="@+id/q1"
         android:layout_width="164dp"
         android:layout_height="63dp"
         android:layout_marginTop="124dp"
@@ -43,7 +43,7 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txv" />
+        app:layout_constraintTop_toBottomOf="@+id/q1" />
 
     <TextView
         android:id="@+id/end"
@@ -84,5 +84,15 @@
         app:layout_constraintTop_toBottomOf="@+id/next"
         app:layout_constraintVertical_bias="0.363"
         tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/q1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
